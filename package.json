@@ -1,0 +1,25 @@
+{
+  "name": "twitter-app",
+  "version": "1.0.0",
+  "description": "see who follow, that doesn't follow you back",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "twitter",
+    "follow",
+    "follower"
+  ],
+  "author": "Tanuja Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "jade": "^1.11.0",
+    "twitter": "^1.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(index.js)"
+  }
+}
