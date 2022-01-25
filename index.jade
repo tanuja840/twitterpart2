@@ -1,5 +1,12 @@
 html 
 head
 title Follow Back list 
+
+link(rel= "stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css")
 body 
-div Hello
+div.row
+dev.col-md-6.col-md-offset-3
+h1.text-center Follow Back List 
+form(action="get-users", method="POST")
+input.form-control(type="text",name="handle",placeholder="Enter Name")
+input.form-control.btn.btn-primary(type="submit",value="Get Users!")

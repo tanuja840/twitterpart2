@@ -1,13 +1,16 @@
+const res = require('express/lib/response');
 var Twitter = require('twitter');
+ module.exports=function(screen_name){
+
  
 var client = new Twitter({
-  consumer_key: 'H6UpKtyA9KLmYatpbqTXnXBIW',
-  consumer_secret: 'o6xBhd6oukgTxCrn0XcNBszYHrZhU9E5O418YjCBMbBznRKY8L',
-  access_token_key: '1483541906458296320-SahmbfvX1q4L547ZXS7RRp6saXN7F2',
-  access_token_secret: 'ddt7FNYrpR8sjSvkUh5CoJtZaoRIihxje3AleV2rxCNnM'
+  consumer_key: 'xPextTlFkUtw8qSf1pIkLwrgp',
+  consumer_secret: 'w8C7qr6q3Mqy6Rj0mf93bSAQtMseJTlxwT4I3q0WCPGbIF4w3x',
+  access_token_key: '1483541906458296320-armysHzv7AXus0ONGun4iVW3oTA8NL',
+  access_token_secret: 'NzJllZtyN8biWAxdoVfxfrVFq2OY2PXtsIw0ckrfg7s7K'
 });
  
-var params = {screen_name: 'tanuja'};
+var params = {screen_name: screen_name};
 var one_way_following = [];
 var users_to_display = [];
 
@@ -50,9 +53,10 @@ client.get('followers/ids', params, function(error, followers_results, response)
    
     users_to_display.push(userObject);
   });
-  console.log(users_to_display);
+  res.render('list', {users: users_to_display});
 });
   });
 });
 
 
+ }
